@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UpDate</title>
+</head>
+<body>
+    <form action="" method="post" style="display: flex; flex-direction: column; width: 500px">
+        {% csrf_token %}
+        <input name="name" value="{{ men.name }}">
+        <input name="surname" value="{{ men.surname }}">
+        <input name="age" value="{{ men.age }}" type="number">
+        <input name="gender" value="{{ men.gender }}" type="checkbox">
+        <input name="birthDay" value="{{ men.birthDay }}">
+        <button>Send</button>
+    </form>
+</body>
+</html>

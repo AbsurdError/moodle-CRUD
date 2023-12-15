@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Значение</title>
+</head>
+<body>
+    {% for i in people %}
+       <h1>{{ i.name }} {{ i.surname }}</h1>
+        <p>{{ i.age }} лет</p>
+        <p>Дата рождения {{ i.birthDay }}</p>
+    <div>
+        <a href="{% url 'update' i.id %}">Редактировать</a>
+        <a href="{% url 'delete' i.id %}">Удалить</a>
+    </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
