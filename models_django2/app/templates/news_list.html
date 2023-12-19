@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все новости</title>
+
+</head>
+<body>
+
+    <h1>Список новостей</h1>
+
+    {% for i in news %}
+        <h2>{{ i.title }}</h2>
+        {% if i.image %}
+            <img src="../../news_images/{{ i.image.name }}" alt="{{ i.title }}">
+
+        {% endif %}
+
+        <p>{{ i.text|safe }}</p>
+
+        <a href="{% url 'news_edit' i.id %}">Изменить</a> |
+        <a href="{% url 'news_delete' i.id %}">Удалить</a>
+    {% endfor %}
+
+</body>
+</html>

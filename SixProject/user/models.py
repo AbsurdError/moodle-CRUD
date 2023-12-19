@@ -1,5 +1,3 @@
-# Проблемы с миграцией makemigrations выполняется нормально, а вот migrate выдаёт много ошибок (из-за этого у меня сейчас вся работа сломалась)
-# подскажите как исправить
 from django.db import models
 
 # Create your models here.
